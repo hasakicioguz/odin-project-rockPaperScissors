@@ -59,8 +59,21 @@ function playGame() {
     let playerSelection = prompt("Enter your selection:");
     let computerSelection = getComputerChoice();
     let message = playRound(playerSelection, computerSelection);
+    console.log(message);
     console.log(
-      `Current player score: ${playerScore}\nCurrent computer score: ${computerScore}`
+      `Current player score: ${playerScore}, current computer score: ${computerScore}`
     );
   }
+  if (playerScore > computerScore) {
+    console.log(`The player is the winner with ${playerScore} scores!`);
+  } else if (computerScore > playerScore) {
+    console.log(`The computer is the winner with ${computerScore} scores!`);
+  } else {
+    console.log(`It is a tie with ${playerScore}`);
+  }
+
+  computerScore = 0;
+  playerScore = 0;
 }
+
+playGame();
