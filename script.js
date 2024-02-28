@@ -13,6 +13,8 @@ function getComputerChoice() {
   }
 }
 
+let computerScore, playerScore;
+
 function playRound(playerSelection, computerSelection) {
   switch (playerSelection.toLowerCase()) {
     case "rock":
@@ -46,5 +48,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function playGame() {
-  for (let i = 0; i < 5; i++) {}
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt("Enter your selection:");
+  }
 }
